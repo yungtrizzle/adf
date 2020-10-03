@@ -6,7 +6,7 @@ package adf
 import (
 	"gonum.org/v1/gonum/mat"
 	"gonum.org/v1/gonum/stat"
-	"github.com/yubgtrizzle/ridge"
+	"github.com/yungtrizzle/ridge"
 
 	"math"
 )
