@@ -6,6 +6,7 @@ package adf
 import (
 	"gonum.org/v1/gonum/mat"
 	"gonum.org/v1/gonum/stat"
+	"github.com/yubgtrizzle/ridge"
 
 	"math"
 )
@@ -81,7 +82,7 @@ func (adf *ADF) Run() {
 
 	regressY := mat.NewVecDense(len(zcol1), zcol1)
 
-	rr := NewRidge(design, regressY, LPenalty)
+	rr := ridge.NewRidge(design, regressY, LPenalty)
 	rr.Regress()
 
 	beta := rr.Coefficients.RawVector().Data
